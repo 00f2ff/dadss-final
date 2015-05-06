@@ -1,0 +1,26 @@
+day,time,forgo none floor,forgo none u,forgo one floor,forgo one u,forgo two floor,forgo two u,forgo three floor,forgo three u
+Monday,10:30 AM,First,2.504,Basement,2.145,Basement,3.527,Basement,2.545
+Monday,1:30 PM,First,2.321,First,1.941,First,2.972,Basement,1.909
+Monday,4:30 PM,First,1.282,First,1.072,First,1.642,Fourth,0.981
+Monday,7:30 PM,First,1.832,First,1.532,Basement,2.352,Basement,1.697
+Monday,10:30 PM,Basement,1.882,Basement,2.056,Basement,3.38,Basement,2.439
+Tuesday,10:30 AM,First,2.748,First,2.298,First,3.52,First,2.073
+Tuesday,1:30 PM,First,1.832,First,1.532,First,2.346,Basement,1.591
+Tuesday,4:30 PM,Basement,1.145,Basement,1.252,Basement,2.058,Basement,1.485
+Tuesday,7:30 PM,Basement,1.473,Basement,1.609,Basement,2.645,Basement,1.909
+Tuesday,10:30 PM,First,2.015,First,1.685,First,2.581,Basement,1.803
+Wednesday,10:30 AM,Basement,2.291,Basement,2.503,Basement,4.115,Basement,2.97
+Wednesday,1:30 PM,First,1.954,First,1.634,First,2.503,Basement,1.485
+Wednesday,4:30 PM,Basement,1.391,Basement,1.52,Basement,2.498,Basement,1.803
+Wednesday,7:30 PM,Third,1.446,Second,1.4,Second,2.084,Second,1.541
+Wednesday,10:30 PM,Third,1.514,Basement,1.609,Basement,2.645,Basement,1.909
+Thursday,10:30 AM,First,2.382,First,1.992,Basement,3.086,Basement,2.227
+Thursday,1:30 PM,Third,1.308,Basement,1.341,Basement,2.205,Basement,1.591
+Thursday,4:30 PM,Basement,1.391,Basement,1.52,Basement,2.498,Basement,1.803
+Thursday,7:30 PM,First,3.115,First,2.605,First,3.989,First,2.35
+Thursday,10:30 PM,First,1.832,Basement,1.877,Basement,3.086,Basement,2.227
+Friday,10:30 AM,Second,1.734,Second,1.786,Second,2.659,Second,1.966
+Friday,1:30 PM,First,2.504,First,2.094,Basement,3.233,Basement,2.333
+Friday,4:30 PM,Basement,1.636,Basement,1.788,Basement,2.939,Basement,2.121
+Friday,7:30 PM,First,2.321,Basement,2.503,Basement,4.115,Basement,2.97
+Friday,10:30 PM,First,2.626,Basement,2.682,Basement,4.409,Basement,3.182

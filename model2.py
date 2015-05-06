@@ -1,4 +1,4 @@
-import json
+import json, csv
 
 info = {
 	"assumptions": {
@@ -234,12 +234,13 @@ info = {
 	}
 }
 
-class Simulator(object):
+class Simulation(object):
 	def __init__(self, info, weight, rank, day, time):
 		self.assumptions = info["assumptions"]
 		self.total_chairs = info["assumptions"]["Total Chairs"]
 		self.availability = info["availability"][day][time]
-		print day, time
+		self.day = day
+		self.time = time
 		self.weight = weight
 		self.rank = rank
 		self.preferences = ['Close to Outlet','Working Alone','Natural Light','Close to Food','Quietness']
@@ -247,6 +248,7 @@ class Simulator(object):
 		self.initial_calculations()
 		self.define_options()
 		self.calculate_options()
+		self.find_best_results()
 
 	# Converts all initial values into what our multipliers rely on
 	def initial_calculations(self):
@@ -355,8 +357,8 @@ class Simulator(object):
 							best_floor = f
 					e[1] = best_floor
 					e[2] = round(best_utility, 3)
-		
 
+# For whatever reason, the following code doesn't work if it is contained (verbatim) inside of a method
 
 # These will change according to simulations
 weight = {'Close to Outlet': 4, 'Working Alone': 1, 'Natural Light': 4, 'Close to Food': 4, 'Quietness': 1}
@@ -364,13 +366,52 @@ rank = {'Close to Outlet': 1, 'Working Alone': 2, 'Natural Light': 5, 'Close to 
 day = 'Thursday'
 time = '1:30 PM'
 
-a = Simulator(info, weight, rank, day, time)
-a.find_best_results()
-print a.forgo_none
-print a.forgo_5
-print a.forgo_45
-print a.forgo_345
+days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
+times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
+sim = []
+for d in days:
+	for t in times:
+		a = Simulation(info, weight, rank, d, t)
+		print a.forgo_none
+		sim.append(a)
+# Write the data to a CSV file
+headers = ['day', 'time', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
+with open('results.csv','w') as f:
+	writer = csv.writer(f)
+	writer.writerow(headers)
+	for s in sim:
+		data = [s.day, s.time, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
+		writer.writerow(data)
 
+# This simulates all possible days and times given weights and ranks
+# def simulate_datetime(info, weight, rank):
+# 	# Basic input options
+# 	days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
+# 	times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
+# 	# Advanced input options
+# 	empty_rank = rank = {'Close to Outlet': 0, 'Working Alone': 0, 'Natural Light': 0, 'Close to Food': 0, 'Quietness': 0}
+
+# 	# s = Simulation(info, weight, rank, days[0], times[0])
+# 	print s.forgo_none
+# 	sim = []
+# 	for d in days:
+# 		for t in times:
+# 			a = Simulation(info, weight, rank, d, t)
+# 			print a.forgo_none
+# 			sim.append(a)
+	
+
+# 	# Write the data to a CSV file
+# 	headers = ['day', 'time', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
+# 	with open('results.csv','w') as f:
+# 		writer = csv.writer(f)
+# 		writer.writerow(headers)
+# 		for s in sim:
+# 			data = [s.day, s.time, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
+# 			writer.writerow(data)
+
+
+# simulate_datetime(info, weight, rank)
 
 """
 Next:
