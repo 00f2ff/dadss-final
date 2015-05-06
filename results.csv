@@ -1,26 +1,151 @@
-day,time,forgo none floor,forgo none u,forgo one floor,forgo one u,forgo two floor,forgo two u,forgo three floor,forgo three u
-Monday,10:30 AM,First,2.504,Basement,2.145,Basement,3.527,Basement,2.545
-Monday,1:30 PM,First,2.321,First,1.941,First,2.972,Basement,1.909
-Monday,4:30 PM,First,1.282,First,1.072,First,1.642,Fourth,0.981
-Monday,7:30 PM,First,1.832,First,1.532,Basement,2.352,Basement,1.697
-Monday,10:30 PM,Basement,1.882,Basement,2.056,Basement,3.38,Basement,2.439
-Tuesday,10:30 AM,First,2.748,First,2.298,First,3.52,First,2.073
-Tuesday,1:30 PM,First,1.832,First,1.532,First,2.346,Basement,1.591
-Tuesday,4:30 PM,Basement,1.145,Basement,1.252,Basement,2.058,Basement,1.485
-Tuesday,7:30 PM,Basement,1.473,Basement,1.609,Basement,2.645,Basement,1.909
-Tuesday,10:30 PM,First,2.015,First,1.685,First,2.581,Basement,1.803
-Wednesday,10:30 AM,Basement,2.291,Basement,2.503,Basement,4.115,Basement,2.97
-Wednesday,1:30 PM,First,1.954,First,1.634,First,2.503,Basement,1.485
-Wednesday,4:30 PM,Basement,1.391,Basement,1.52,Basement,2.498,Basement,1.803
-Wednesday,7:30 PM,Third,1.446,Second,1.4,Second,2.084,Second,1.541
-Wednesday,10:30 PM,Third,1.514,Basement,1.609,Basement,2.645,Basement,1.909
-Thursday,10:30 AM,First,2.382,First,1.992,Basement,3.086,Basement,2.227
-Thursday,1:30 PM,Third,1.308,Basement,1.341,Basement,2.205,Basement,1.591
-Thursday,4:30 PM,Basement,1.391,Basement,1.52,Basement,2.498,Basement,1.803
-Thursday,7:30 PM,First,3.115,First,2.605,First,3.989,First,2.35
-Thursday,10:30 PM,First,1.832,Basement,1.877,Basement,3.086,Basement,2.227
-Friday,10:30 AM,Second,1.734,Second,1.786,Second,2.659,Second,1.966
-Friday,1:30 PM,First,2.504,First,2.094,Basement,3.233,Basement,2.333
-Friday,4:30 PM,Basement,1.636,Basement,1.788,Basement,2.939,Basement,2.121
-Friday,7:30 PM,First,2.321,Basement,2.503,Basement,4.115,Basement,2.97
-Friday,10:30 PM,First,2.626,Basement,2.682,Basement,4.409,Basement,3.182
+day,time,rank,forgo none floor,forgo none u,forgo one floor,forgo one u,forgo two floor,forgo two u,forgo three floor,forgo three u
+Monday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,2.043,Third,1.773,Third,1.319,Basement,3.309
+Monday,10:30 AM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.048,Basement,0.053,Basement,0.034,Basement,0.093
+Monday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.003
+Monday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,10:30 AM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,1.893,Third,1.495,Third,1.112,Basement,2.482
+Monday,1:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.036,Basement,0.04,Basement,0.025,Basement,0.07
+Monday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Monday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,1:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,1.046,First,0.821,Fourth,0.643,First,1.256
+Monday,4:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.016,Basement,0.018,Basement,0.011,Basement,0.031
+Monday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.001
+Monday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,4:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,1.495,First,1.173,Basement,0.824,Basement,2.206
+Monday,7:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.032,Basement,0.036,Basement,0.022,Basement,0.062
+Monday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Monday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,7:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Basement,1.15,Basement,0.836,Basement,1.185,Basement,3.171
+Monday,10:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.046,Basement,0.051,Basement,0.032,Basement,0.089
+Monday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.003
+Monday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,10:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Monday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,2.242,First,1.76,Third,1.086,First,2.692
+Tuesday,10:30 AM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.038,Basement,0.042,Basement,0.027,Basement,0.074
+Tuesday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.002
+Tuesday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,10:30 AM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,1.495,First,1.173,Third,0.776,Basement,2.068
+Tuesday,1:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.03,Basement,0.033,Basement,0.021,Basement,0.058
+Tuesday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Tuesday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,1:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,0.797,First,0.626,Basement,0.721,Basement,1.93
+Tuesday,4:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.028,Basement,0.031,Basement,0.02,Basement,0.054
+Tuesday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Tuesday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,4:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Basement,0.9,Third,0.695,Basement,0.927,Basement,2.482
+Tuesday,7:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.036,Basement,0.04,Basement,0.025,Basement,0.07
+Tuesday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Tuesday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,7:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,1.644,Third,1.356,Third,1.008,Basement,2.344
+Tuesday,10:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.034,Basement,0.038,Basement,0.024,Basement,0.066
+Tuesday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Tuesday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,10:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Tuesday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Third,2.268,Third,2.225,Third,1.655,Basement,3.861
+Wednesday,10:30 AM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.056,Basement,0.062,Basement,0.039,Basement,0.109
+Wednesday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.003
+Wednesday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,10:30 AM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,1.594,Third,1.321,Third,0.983,Basement,1.93
+Wednesday,1:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.028,Basement,0.031,Basement,0.02,Basement,0.054
+Wednesday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Wednesday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,1:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Basement,0.85,Third,0.73,Basement,0.876,Basement,2.344
+Wednesday,4:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.034,Basement,0.038,Basement,0.024,Basement,0.066
+Wednesday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Wednesday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,4:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Third,1.489,Third,1.46,Third,1.086,Basement,1.93
+Wednesday,7:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.028,Basement,0.031,Basement,0.02,Basement,0.054
+Wednesday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Wednesday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,7:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Third,1.56,Third,1.529,Third,1.138,Basement,2.482
+Wednesday,10:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.036,Basement,0.04,Basement,0.025,Basement,0.07
+Wednesday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Wednesday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,10:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Wednesday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Third,1.949,Third,1.912,Third,1.422,Basement,2.895
+Thursday,10:30 AM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.042,Basement,0.047,Basement,0.029,Basement,0.081
+Thursday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.003
+Thursday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,10:30 AM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Third,1.347,Third,1.321,Third,0.983,Basement,2.068
+Thursday,1:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.03,Basement,0.033,Basement,0.021,Basement,0.058
+Thursday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Thursday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,1:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Third,0.851,Third,0.834,Basement,0.876,Basement,2.344
+Thursday,4:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.034,Basement,0.038,Basement,0.024,Basement,0.066
+Thursday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Thursday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,4:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,2.541,Third,2.12,Third,1.577,First,3.051
+Thursday,7:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",First,0.037,Basement,0.038,Basement,0.024,Basement,0.066
+Thursday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Thursday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,7:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Third,1.737,Third,1.703,Third,1.267,Basement,2.895
+Thursday,10:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.042,Basement,0.047,Basement,0.029,Basement,0.081
+Thursday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.003
+Thursday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,10:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Thursday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Third,1.56,Third,1.529,Fourth,1.211,Basement,2.482
+Friday,10:30 AM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.036,Basement,0.04,Basement,0.025,Basement,0.07
+Friday,10:30 AM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.0,Basement,0.001,Basement,0.002
+Friday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,10:30 AM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,10:30 AM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,2.043,First,1.603,Second,1.246,Basement,3.033
+Friday,1:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.044,Basement,0.049,Basement,0.031,Basement,0.085
+Friday,1:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.003
+Friday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,1:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,1:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",Third,1.311,Third,1.286,Fourth,1.173,Basement,2.758
+Friday,4:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.04,Basement,0.045,Basement,0.028,Basement,0.078
+Friday,4:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.002
+Friday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,4:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,4:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,1.893,First,1.486,Basement,1.442,Basement,3.861
+Friday,7:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.056,Basement,0.062,Basement,0.039,Basement,0.109
+Friday,7:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.003
+Friday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,7:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,7:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}",First,2.142,First,1.682,Basement,1.545,Basement,4.136
+Friday,10:30 PM,"{'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}",Basement,0.06,Basement,0.067,Basement,0.042,Basement,0.116
+Friday,10:30 PM,"{'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}",Basement,0.001,Basement,0.001,Basement,0.001,Basement,0.004
+Friday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,10:30 PM,"{'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0
+Friday,10:30 PM,"{'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}",Basement,0.0,Basement,0.0,Basement,0.0,Basement,0.0

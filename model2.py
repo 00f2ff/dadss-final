@@ -1,4 +1,4 @@
-import json, csv
+import json, csv, itertools
 
 info = {
 	"assumptions": {
@@ -361,56 +361,76 @@ class Simulation(object):
 
 # These will change according to simulations
 weight = {'Close to Outlet': 4, 'Working Alone': 1, 'Natural Light': 4, 'Close to Food': 4, 'Quietness': 1}
-rank = {'Close to Outlet': 1, 'Working Alone': 2, 'Natural Light': 5, 'Close to Food': 3, 'Quietness': 4} # 1 is most important, so rank * of 5
-# day = 'Thursday'
-# time = '1:30 PM'
+# rank = {'Close to Outlet': 1, 'Working Alone': 2, 'Natural Light': 5, 'Close to Food': 3, 'Quietness': 4} # 1 is most important, so rank * of 5
+rank = {'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}
+day = 'Monday'
+time = '10:30 AM'
+# a = Simulation(info, weight, rank, day, time)
+# print a.forgo_345
 
-# days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
-# times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
-# sim = []
-# for d in days:
-# 	for t in times:
-# 		a = Simulation(info, weight, rank, d, t)
-# 		print a.forgo_none
-# 		sim.append(a)
-# # Write the data to a CSV file
-# headers = ['day', 'time', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
-# with open('results.csv','w') as f:
-# 	writer = csv.writer(f)
-# 	writer.writerow(headers)
-# 	for s in sim:
-# 		data = [s.day, s.time, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
-# 		writer.writerow(data)
+
+# This generates the 5! different rank permutations available
+def rank_combos():
+	ranks = []
+	# Create a list of all possible permutations
+	permutations = list(itertools.permutations([1,2,3,4,5]))
+	# Append a rank dict for each permutation to ranks
+	for p in permutations:
+		rank = {'Close to Outlet': p[0], 'Working Alone': p[1], 'Natural Light': p[2], 'Close to Food': p[3], 'Quietness': p[4]}
+		ranks.append(rank)
+	return ranks
+
+# This generates 3! * 2 different rank permutations based on survey data for what students find important
+def informed_ranks():	
+	ranks = []
+	permutations = list(itertools.permutations([1,2,3]))
+	# Append a rank dict for each permutation to ranks
+	for p in permutations:
+		rank = {'Close to Outlet': p[0], 'Working Alone': p[1], 'Natural Light': 0, 'Close to Food': 0, 'Quietness': p[2]}
+		ranks.append(rank)
+	# Go through ranks and add 4 or 5 to the remaining preferences
+	for i in xrange(len(ranks)):
+		if i % 2 == 0:
+			ranks[i]['Natural Light'] = 4
+			ranks[i]['Close to Food'] = 5
+		else:
+			ranks[i]['Natural Light'] = 5
+			ranks[i]['Close to Food'] = 4
+	return ranks
 
 # This simulates all possible days and times given weights and ranks
-def simulate_datetime(info, weight, rank):
+def simulate_datetime(info, weight):
 	# Basic input options
 	days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
 	times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
 	# Advanced input options
-	empty_rank = {'Close to Outlet': 0, 'Working Alone': 0, 'Natural Light': 0, 'Close to Food': 0, 'Quietness': 0}
-
-	# s = Simulation(info, weight, rank, days[0], times[0])
-	# print s.forgo_none
+	
+	ranks = informed_ranks()
+	# aaa = Simulation(info, weight, ranks[1], 'Monday', '10:30 AM')
+	# print aaa.forgo_none
 	sim = []
 	for d in days:
 		for t in times:
-			s = Simulation(info, weight, rank, d, t)
-			print s.forgo_none
-			sim.append(s)
+			for r in ranks:
+				si = Simulation(info, weight, r, d, t)
+				# print s.forgo_none
+				sim.append(si)
+				del si
+				# si = ''
 	
 
 	# Write the data to a CSV file
-	headers = ['day', 'time', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
+	# Keep rank unadjusted for presentation purposes
+	headers = ['day', 'time', 'rank', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
 	with open('results.csv','w') as f:
 		writer = csv.writer(f)
 		writer.writerow(headers)
 		for s in sim:
-			data = [s.day, s.time, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
+			data = [s.day, s.time, s.rank, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
 			writer.writerow(data)
 
 
-simulate_datetime(info, weight, rank)
+simulate_datetime(info, weight)
 
 """
 Next:
