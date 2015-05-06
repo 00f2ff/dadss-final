@@ -399,7 +399,7 @@ def informed_ranks():
 	return ranks
 
 # This simulates all possible days and times given weights and ranks
-def simulate_datetime(info, weight, rank):
+def simulate_datetime(info, weight, rank, file_ending):
 	# Basic input options
 	days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
 	times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
@@ -422,7 +422,7 @@ def simulate_datetime(info, weight, rank):
 	# Write the data to a CSV file
 	# Keep rank unadjusted for presentation purposes
 	headers = ['day', 'time', 'rank', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
-	with open('results.csv','w') as f:
+	with open('results_{0}.csv'.format(file_ending),'wb') as f:
 		writer = csv.writer(f)
 		writer.writerow(headers)
 		for s in sim:
@@ -430,40 +430,43 @@ def simulate_datetime(info, weight, rank):
 			writer.writerow(data)
 	return sim
 
-simulate_datetime(info, weight, rank)
+# simulate_datetime(info, weight, rank)
 
-# Even the following doesn't really work...
+# Even the following doesn't really work... 
 # ranks = informed_ranks()
 # all_sims = []
-# for r in ranks:
-# 	sim = simulate_datetime(info, weight, r)
-# 	all_sims += sim
+# for i in xrange(len(ranks)):
+# 	sim = simulate_datetime(info, weight, ranks[i], i)
+	# all_sims += sim
 # all_sims = []
-# rank = {'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 1}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 4, 'Quietness': 3, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 2}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 4, 'Quietness': 3, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 1}
-# all_sims += simulate_datetime(info, weight, rank)
+rank = {'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}
+# simulate_datetime(info, weight, rank, 0)
+rank = {'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}
+# simulate_datetime(info, weight, rank, 1)
+rank = {'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}
+# simulate_datetime(info, weight, rank, 2)
+rank = {'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 1}
+# simulate_datetime(info, weight, rank, 3)
+rank = {'Close to Food': 4, 'Quietness': 3, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 2}
+# simulate_datetime(info, weight, rank, 4)
+rank = {'Close to Food': 4, 'Quietness': 3, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 1}
+# simulate_datetime(info, weight, rank, 5)
 
-# rank = {'Close to Food': 5, 'Quietness': 1, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 3}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 5, 'Quietness': 1, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 2}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 3}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}
-# all_sims += simulate_datetime(info, weight, rank)
-# rank = {'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}
-# all_sims += simulate_datetime(info, weight, rank)
+rank = {'Close to Food': 5, 'Quietness': 1, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 3}
+# simulate_datetime(info, weight, rank, 6)
+rank = {'Close to Food': 5, 'Quietness': 1, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 2}
+# simulate_datetime(info, weight, rank, 7)
+rank = {'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 3}
+# simulate_datetime(info, weight, rank, 8)
+rank = {'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}
+# simulate_datetime(info, weight, rank, 9)
+rank = {'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}
+# simulate_datetime(info, weight, rank, 10)
+rank = {'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}
+simulate_datetime(info, weight, rank, 11)
+
+
+
 # Write the data to a CSV file
 # Keep rank unadjusted for presentation purposes
 # headers = ['day', 'time', 'rank', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
@@ -484,6 +487,7 @@ This might be too computationally intensive, so why don't I start out with:
 4. Do 3 but go through all possible weights
 5. Figure out how to analyze this data
 
+finding: I think the only way I can make this work is by running the file at separate times with different ranks writing to different files, and then doing a big copy-paste at the end. This is really annoying though, and I have no idea what's wrong
 
 """
 
