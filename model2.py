@@ -358,60 +358,59 @@ class Simulation(object):
 					e[1] = best_floor
 					e[2] = round(best_utility, 3)
 
-# For whatever reason, the following code doesn't work if it is contained (verbatim) inside of a method
 
 # These will change according to simulations
 weight = {'Close to Outlet': 4, 'Working Alone': 1, 'Natural Light': 4, 'Close to Food': 4, 'Quietness': 1}
 rank = {'Close to Outlet': 1, 'Working Alone': 2, 'Natural Light': 5, 'Close to Food': 3, 'Quietness': 4} # 1 is most important, so rank * of 5
-day = 'Thursday'
-time = '1:30 PM'
+# day = 'Thursday'
+# time = '1:30 PM'
 
-days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
-times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
-sim = []
-for d in days:
-	for t in times:
-		a = Simulation(info, weight, rank, d, t)
-		print a.forgo_none
-		sim.append(a)
-# Write the data to a CSV file
-headers = ['day', 'time', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
-with open('results.csv','w') as f:
-	writer = csv.writer(f)
-	writer.writerow(headers)
-	for s in sim:
-		data = [s.day, s.time, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
-		writer.writerow(data)
+# days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
+# times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
+# sim = []
+# for d in days:
+# 	for t in times:
+# 		a = Simulation(info, weight, rank, d, t)
+# 		print a.forgo_none
+# 		sim.append(a)
+# # Write the data to a CSV file
+# headers = ['day', 'time', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
+# with open('results.csv','w') as f:
+# 	writer = csv.writer(f)
+# 	writer.writerow(headers)
+# 	for s in sim:
+# 		data = [s.day, s.time, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
+# 		writer.writerow(data)
 
 # This simulates all possible days and times given weights and ranks
-# def simulate_datetime(info, weight, rank):
-# 	# Basic input options
-# 	days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
-# 	times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
-# 	# Advanced input options
-# 	empty_rank = rank = {'Close to Outlet': 0, 'Working Alone': 0, 'Natural Light': 0, 'Close to Food': 0, 'Quietness': 0}
+def simulate_datetime(info, weight, rank):
+	# Basic input options
+	days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
+	times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
+	# Advanced input options
+	empty_rank = {'Close to Outlet': 0, 'Working Alone': 0, 'Natural Light': 0, 'Close to Food': 0, 'Quietness': 0}
 
-# 	# s = Simulation(info, weight, rank, days[0], times[0])
-# 	print s.forgo_none
-# 	sim = []
-# 	for d in days:
-# 		for t in times:
-# 			a = Simulation(info, weight, rank, d, t)
-# 			print a.forgo_none
-# 			sim.append(a)
+	# s = Simulation(info, weight, rank, days[0], times[0])
+	# print s.forgo_none
+	sim = []
+	for d in days:
+		for t in times:
+			s = Simulation(info, weight, rank, d, t)
+			print s.forgo_none
+			sim.append(s)
 	
 
-# 	# Write the data to a CSV file
-# 	headers = ['day', 'time', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
-# 	with open('results.csv','w') as f:
-# 		writer = csv.writer(f)
-# 		writer.writerow(headers)
-# 		for s in sim:
-# 			data = [s.day, s.time, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
-# 			writer.writerow(data)
+	# Write the data to a CSV file
+	headers = ['day', 'time', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
+	with open('results.csv','w') as f:
+		writer = csv.writer(f)
+		writer.writerow(headers)
+		for s in sim:
+			data = [s.day, s.time, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
+			writer.writerow(data)
 
 
-# simulate_datetime(info, weight, rank)
+simulate_datetime(info, weight, rank)
 
 """
 Next:
