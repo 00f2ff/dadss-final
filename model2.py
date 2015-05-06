@@ -253,15 +253,15 @@ class Simulator(object):
 		# Adjust weight to scoring standard (opposite scale than rank)
 		self.adjusted_weight = {}
 		for p in self.preferences:
-			if weight[p] == 5: # least important
+			if self.weight[p] == 5: # least important
 				self.adjusted_weight[p] = 1
-			elif weight[p] == 4:
+			elif self.weight[p] == 4:
 				self.adjusted_weight[p] = 0.75
-			elif weight[p] == 3:
+			elif self.weight[p] == 3:
 				self.adjusted_weight[p] = 0.5
-			elif weight[p] == 2:
+			elif self.weight[p] == 2:
 				self.adjusted_weight[p] = 0.25
-			elif weight[p] == 1: # most important
+			elif self.weight[p] == 1: # most important
 				self.adjusted_weight[p] = 0
 
 		# Adjust rank to scoring standard
@@ -269,6 +269,10 @@ class Simulator(object):
 		# add adjusted ranks
 		for r in self.rank.keys():
 			self.adjusted_rank[r] = 6 - self.rank[r] # 5 turns into multiplier of 1; 1 turns into multiplier of 5
+
+		# Turn availabilities into probabilities
+		for t in self.total_chairs:
+			self.availability[t] /= self.total_chairs[t]
 
 	# Reads a default options file to create a starter dict
 	def define_options(self):
@@ -310,34 +314,31 @@ class Simulator(object):
 	# Returns a list of the best path(s) and floor(s) in the entire tree. If more than one floor has the same utility, both will be listed.
 	def find_best_overall(self):
 		# calculate best option(s)
-		best_paths = []
-		best_floors = []
-		best_utility = 0
+		self.best_paths = []
+		self.best_floors = []
+		self.best_utility = 0
 		# iterate through options
 		for o in self.options:
 			# iterate through floors
 			for f in self.floors:
 				# if utility is highest, change values
-				if o[f] > best_utility: 
-					best_utility = o[f]
-					best_paths = [o['path']]
-					best_floors = [f]
+				if o[f] > self.best_utility: 
+					self.best_utility = o[f]
+					self.best_paths = [o['path']]
+					self.best_floors = [f]
 				# if utility is tied, add floor to values
-				elif o[f] == best_utility:
-					best_paths.append(o['path'])
-					best_floors.append(f)
-		print best_paths
-		print best_floors
-		print best_utility
+				elif o[f] == self.best_utility:
+					self.best_paths.append(o['path'])
+					self.best_floors.append(f)
 
 	# Finds the best four results for users per our Excel model
 	def find_best_results(self):
 		# Initialize variables with [path, floor, utility]
-		forgo_none = [['yes','yes','yes','yes','yes'], '', 0]
-		forgo_5 = [['yes','yes','yes','yes','no'], '', 0]
-		forgo_45 = [['yes','yes','yes','no','no'], '', 0]
-		forgo_345 = [['yes','yes','no','no','no'], '', 0]
-		endings = [forgo_none, forgo_5, forgo_45, forgo_345]
+		self.forgo_none = [['yes','yes','yes','yes','yes'], '', 0]
+		self.forgo_5 = [['yes','yes','yes','yes','no'], '', 0]
+		self.forgo_45 = [['yes','yes','yes','no','no'], '', 0]
+		self.forgo_345 = [['yes','yes','no','no','no'], '', 0]
+		endings = [self.forgo_none, self.forgo_5, self.forgo_45, self.forgo_345]
 		# Iterate through options
 		for o in self.options:
 			# Iterate through endings
@@ -354,8 +355,7 @@ class Simulator(object):
 							best_floor = f
 					e[1] = best_floor
 					e[2] = round(best_utility, 3)
-		for g in endings: 
-			print g
+		
 
 
 # These will change according to simulations
@@ -364,130 +364,13 @@ rank = {'Close to Outlet': 1, 'Working Alone': 2, 'Natural Light': 5, 'Close to 
 day = 'Thursday'
 time = '1:30 PM'
 
-# a = Simulator(info, weight, rank, day, time)
-# a.find_best_results()
+a = Simulator(info, weight, rank, day, time)
+a.find_best_results()
+print a.forgo_none
+print a.forgo_5
+print a.forgo_45
+print a.forgo_345
 
-preferences = ['Close to Outlet','Working Alone','Natural Light','Close to Food','Quietness']
-
-# Adjust weight to scoring standard (opposite scale than rank)
-adjusted_weight = {}
-for p in preferences:
-	if weight[p] == 5: # least important
-		adjusted_weight[p] = 1
-	elif weight[p] == 4:
-		adjusted_weight[p] = 0.75
-	elif weight[p] == 3:
-		adjusted_weight[p] = 0.5
-	elif weight[p] == 2:
-		adjusted_weight[p] = 0.25
-	elif weight[p] == 1: # most important
-		adjusted_weight[p] = 0
-
-# Adjust rank to scoring standard
-adjusted_rank = {}
-# add adjusted ranks
-for r in rank.keys():
-	adjusted_rank[r] = 6 - rank[r] # 5 turns into multiplier of 1; 1 turns into multiplier of 5
-
-print adjusted_rank
-print adjusted_weight
-
-# Load assumption and availability data
-# with open('assumptions.json', 'r') as f:
-# 	info = f.read()
-# info = json.loads(info)
-assumptions = info["assumptions"]
-total_chairs = info["assumptions"]["Total Chairs"]
-availability = info["availability"][day][time]
-# Turn availabilities into probabilities
-for t in total_chairs:
-	availability[t] /= total_chairs[t]
-
-floors = ['Basement','First','Second','Third','Fourth']
-
-
-# Find utility given a assumption, rank, weight, availability, and if a 'no' path is followed
-def utility(p, r, w, a, invert):
-	if invert: return (1-p)*r*(1-w)*a
-	else: return p*r*w*a
-
-with open('tree2.json','r') as f:
-	tree = f.read()
-tree = json.loads(tree)
-options = tree['paths']
-
-# iterate through options
-for o in options:
-	# iterate through choice node indexes
-	for c in xrange(len(o['path'])):
-		# see if inverse is needed
-		if o['path'][c] == "no": i = True
-		else: i = False
-		# iterate through preferences in adjusted_rank dict
-		for p in adjusted_rank.keys():
-			# check that rank applies to correct node
-			if 5 - adjusted_rank[p] == c: # ex. c = 0 means first node; assign multiplier then
-				r_mult = adjusted_rank[p]
-				w_mult = adjusted_weight[p]
-				# iterate through floors
-				for f in floors:
-					# calculate utility
-					u = utility(assumptions[p][f], r_mult, w_mult, availability[f], i)
-					# add utility to this option's floor's utility
-					o[f] += u
-
-with open("tree_results.json","w") as f:
-    f.write(str(json.dumps(options, indent=2)))
-
-def find_best_overall():
-	# calculate best option(s)
-	best_paths = []
-	best_floors = []
-	best_utility = 0
-	# iterate through options
-	for o in options:
-		# iterate through floors
-		for f in floors:
-			# if utility is highest, change values
-			if o[f] > best_utility: 
-				best_utility = o[f]
-				best_paths = [o['path']]
-				best_floors = [f]
-			# if utility is tied, add floor to values
-			elif o[f] == best_utility:
-				best_paths.append(o['path'])
-				best_floors.append(f)
-	print best_paths
-	print best_floors
-	print best_utility
-
-def find_best_results():
-	# Initialize variables with [path, floor, utility]
-	forgo_none = [['yes','yes','yes','yes','yes'], '', 0]
-	forgo_5 = [['yes','yes','yes','yes','no'], '', 0]
-	forgo_45 = [['yes','yes','yes','no','no'], '', 0]
-	forgo_345 = [['yes','yes','no','no','no'], '', 0]
-	endings = [forgo_none, forgo_5, forgo_45, forgo_345]
-	# Iterate through options
-	for o in options:
-		# Iterate through endings
-		for e in endings:
-			# Check if path matches
-			if e[0] == o['path']:
-				best_utility = 0
-				best_floor = ''
-				# Iterate through floors
-				for f in floors: # For the sake of time I'm avoiding duplicates
-					# Find best utility
-					if o[f] > best_utility:
-						best_utility = o[f]
-						best_floor = f
-				e[1] = best_floor
-				e[2] = round(best_utility, 3)
-	for g in endings: 
-		print g
-
-# find_best_results()
 
 """
 Next:
