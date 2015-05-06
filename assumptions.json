@@ -1,0 +1,233 @@
+{
+	"assumptions": {
+		"Natural Light": {
+			"Basement": 0,
+			"First": 0.95,
+			"Second": 0.15,
+			"Third": 0.9,
+			"Fourth": 0.25
+		},
+		"Close to Outlet": {
+			"Basement": 0.3,
+			"First": 0.35,
+			"Second": 0.45,
+			"Third": 0.95,
+			"Fourth": 0.6
+		},
+		"Quietness": {
+			"Basement": 0.05,
+			"First": 0.05,
+			"Second": 0.15,
+			"Third": 1,
+			"Fourth": 0.4
+		},
+		"Close to Food": {
+			"Basement": 0.7,
+			"First": 1,
+			"Second": 0.7,
+			"Third": 0.35,
+			"Fourth": 0
+		},
+		"Working Alone": {
+			"Basement": 0.1,
+			"First": 0.1,
+			"Second": 0.15,
+			"Third": 1,
+			"Fourth": 0.45
+		},
+		"Total Chairs": {
+			"Basement": 33.0,
+			"First": 70.0,
+			"Second": 72.0,
+			"Third": 146.0,
+			"Fourth": 76.0
+		}
+	},
+	"availability": {
+		"Monday": {
+			"10:30 AM": {
+				"Basement": 24,
+				"First": 41,
+				"Second": 29,
+				"Third": 51,
+				"Fourth": 32
+			},
+			"1:30 PM": {
+				"Basement": 18,
+				"First": 38,
+				"Second": 28,
+				"Third": 43,
+				"Fourth": 20
+			},
+			"4:30 PM": {
+				"Basement": 8,
+				"First": 21,
+				"Second": 18,
+				"Third": 14,
+				"Fourth": 17
+			},
+			"7:30 PM": {
+				"Basement": 16,
+				"First": 30,
+				"Second": 20,
+				"Third": 30,
+				"Fourth": 21
+			},
+			"10:30 PM": {
+				"Basement": 23,
+				"First": 13,
+				"Second": 13,
+				"Third": 9,
+				"Fourth": 14
+			}
+		},
+		"Tuesday": {
+			"10:30 AM": {
+				"Basement": 19,
+				"First": 45,
+				"Second": 21,
+				"Third": 42,
+				"Fourth": 23
+			},
+			"1:30 PM": {
+				"Basement": 15,
+				"First": 30,
+				"Second": 16,
+				"Third": 30,
+				"Fourth": 15
+			},
+			"4:30 PM": {
+				"Basement": 14,
+				"First": 16,
+				"Second": 17,
+				"Third": 18,
+				"Fourth": 13
+			},
+			"7:30 PM": {
+				"Basement": 18,
+				"First": 13,
+				"Second": 15,
+				"Third": 20,
+				"Fourth": 18
+			},
+			"10:30 PM": {
+				"Basement": 17,
+				"First": 33,
+				"Second": 19,
+				"Third": 39,
+				"Fourth": 17
+			}
+		},
+		"Wednesday": {
+			"10:30 AM": {
+				"Basement": 28,
+				"First": 25,
+				"Second": 41,
+				"Third": 64,
+				"Fourth": 43
+			},
+			"1:30 PM": {
+				"Basement": 14,
+				"First": 32,
+				"Second": 11,
+				"Third": 38,
+				"Fourth": 15
+			},
+			"4:30 PM": {
+				"Basement": 17,
+				"First": 17,
+				"Second": 11,
+				"Third": 21,
+				"Fourth": 13
+			},
+			"7:30 PM": {
+				"Basement": 14,
+				"First": 16,
+				"Second": 29,
+				"Third": 42,
+				"Fourth": 12
+			},
+			"10:30 PM": {
+				"Basement": 18,
+				"First": 22,
+				"Second": 24,
+				"Third": 44,
+				"Fourth": 16
+			}
+		},
+		"Thursday": {
+			"10:30 AM": {
+				"Basement": 21,
+				"First": 39,
+				"Second": 26,
+				"Third": 55,
+				"Fourth": 27
+			},
+			"1:30 PM": {
+				"Basement": 15,
+				"First": 20,
+				"Second": 16,
+				"Third": 38,
+				"Fourth": 18
+			},
+			"4:30 PM": {
+				"Basement": 17,
+				"First": 14,
+				"Second": 15,
+				"Third": 24,
+				"Fourth": 14
+			},
+			"7:30 PM": {
+				"Basement": 17,
+				"First": 51,
+				"Second": 30,
+				"Third": 61,
+				"Fourth": 28
+			},
+			"10:30 PM": {
+				"Basement": 21,
+				"First": 30,
+				"Second": 20,
+				"Third": 49,
+				"Fourth": 24
+			}
+		},
+		"Friday": {
+			"10:30 AM": {
+				"Basement": 18,
+				"First": 25,
+				"Second": 37,
+				"Third": 44,
+				"Fourth": 32
+			},
+			"1:30 PM": {
+				"Basement": 22,
+				"First": 41,
+				"Second": 41,
+				"Third": 42,
+				"Fourth": 27
+			},
+			"4:30 PM": {
+				"Basement": 20,
+				"First": 20,
+				"Second": 34,
+				"Third": 37,
+				"Fourth": 31
+			},
+			"7:30 PM": {
+				"Basement": 28,
+				"First": 38,
+				"Second": 39,
+				"Third": 42,
+				"Fourth": 20
+			},
+			"10:30 PM": {
+				"Basement": 30,
+				"First": 43,
+				"Second": 40,
+				"Third": 44,
+				"Fourth": 34
+			}
+		}
+	}
+}

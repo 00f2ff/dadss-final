@@ -1,0 +1,260 @@
+{
+	"paths": [
+		{
+			"path": ["yes","yes","yes","yes","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","yes","yes","yes","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","yes","yes","no","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","yes","yes","no","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","yes","no","yes","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","yes","no","yes","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","yes","no","no","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","yes","no","no","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","no","yes","yes","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","no","yes","yes","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","no","yes","no","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","no","yes","no","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","no","no","yes","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","no","no","yes","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","no","no","no","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["yes","no","no","no","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","yes","yes","yes","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","yes","yes","yes","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","yes","yes","no","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","yes","yes","no","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","yes","no","yes","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","yes","no","yes","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","yes","no","no","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","yes","no","no","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","no","yes","yes","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","no","yes","yes","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","no","yes","no","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","no","yes","no","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","no","no","yes","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","no","no","yes","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","no","no","no","yes"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		},
+		{
+			"path": ["no","no","no","no","no"],
+			"Basement": 0,
+			"First": 0,
+			"Second": 0,
+			"Third": 0,
+			"Fourth": 0
+		}
+	]
+}
