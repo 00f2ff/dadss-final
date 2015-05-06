@@ -310,8 +310,8 @@ class Simulation(object):
 							# add utility to this option's floor's utility
 							o[f] += u
 
-		with open("tree_results.json","w") as f:
-		    f.write(str(json.dumps(self.options, indent=2)))
+		# with open("tree_results.json","w") as f:
+		#     f.write(str(json.dumps(self.options, indent=2)))
 
 	# Returns a list of the best path(s) and floor(s) in the entire tree. If more than one floor has the same utility, both will be listed.
 	def find_best_overall(self):
@@ -399,24 +399,24 @@ def informed_ranks():
 	return ranks
 
 # This simulates all possible days and times given weights and ranks
-def simulate_datetime(info, weight):
+def simulate_datetime(info, weight, rank):
 	# Basic input options
 	days = ['Monday', 'Tuesday','Wednesday', 'Thursday', 'Friday']
 	times = ['10:30 AM', '1:30 PM', '4:30 PM', '7:30 PM', '10:30 PM']
 	# Advanced input options
 	
-	ranks = informed_ranks()
+	# ranks = informed_ranks()
 	# aaa = Simulation(info, weight, ranks[1], 'Monday', '10:30 AM')
 	# print aaa.forgo_none
 	sim = []
 	for d in days:
 		for t in times:
-			for r in ranks:
-				si = Simulation(info, weight, r, d, t)
-				# print s.forgo_none
-				sim.append(si)
-				del si
-				# si = ''
+			# for r in ranks:
+			si = Simulation(info, weight, rank, d, t)
+			# print s.forgo_none
+			sim.append(si)
+			# del si
+			# si = ''
 	
 
 	# Write the data to a CSV file
@@ -428,9 +428,51 @@ def simulate_datetime(info, weight):
 		for s in sim:
 			data = [s.day, s.time, s.rank, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
 			writer.writerow(data)
+	return sim
 
+simulate_datetime(info, weight, rank)
 
-simulate_datetime(info, weight)
+# Even the following doesn't really work...
+# ranks = informed_ranks()
+# all_sims = []
+# for r in ranks:
+# 	sim = simulate_datetime(info, weight, r)
+# 	all_sims += sim
+# all_sims = []
+# rank = {'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 3}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 4, 'Quietness': 1, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 2}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 3}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 4, 'Quietness': 2, 'Natural Light': 5, 'Close to Outlet': 3, 'Working Alone': 1}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 4, 'Quietness': 3, 'Natural Light': 5, 'Close to Outlet': 1, 'Working Alone': 2}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 4, 'Quietness': 3, 'Natural Light': 5, 'Close to Outlet': 2, 'Working Alone': 1}
+# all_sims += simulate_datetime(info, weight, rank)
+
+# rank = {'Close to Food': 5, 'Quietness': 1, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 3}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 5, 'Quietness': 1, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 2}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 3}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 5, 'Quietness': 2, 'Natural Light': 4, 'Close to Outlet': 3, 'Working Alone': 1}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 1, 'Working Alone': 2}
+# all_sims += simulate_datetime(info, weight, rank)
+# rank = {'Close to Food': 5, 'Quietness': 3, 'Natural Light': 4, 'Close to Outlet': 2, 'Working Alone': 1}
+# all_sims += simulate_datetime(info, weight, rank)
+# Write the data to a CSV file
+# Keep rank unadjusted for presentation purposes
+# headers = ['day', 'time', 'rank', 'forgo none floor', 'forgo none u', 'forgo one floor', 'forgo one u', 'forgo two floor', 'forgo two u', 'forgo three floor', 'forgo three u']
+# with open('results.csv','wb') as f:
+# 	writer = csv.writer(f)
+# 	writer.writerow(headers)
+# 	for s in all_sims:
+# 		data = [s.day, s.time, s.rank, s.forgo_none[1], s.forgo_none[2], s.forgo_5[1], s.forgo_5[2], s.forgo_45[1], s.forgo_45[2], s.forgo_345[1], s.forgo_345[2]]
+# 		writer.writerow(data)
 
 """
 Next:
